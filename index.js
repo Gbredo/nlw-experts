@@ -1,95 +1,96 @@
 const perguntas = [
-    {
-      pergunta: "O que é JavaScript?",
-      respostas: [
-        "Uma linguagem de marcação",
-        "Uma linguagem de programação",
-        "Um framework",
-      ],
-      correta: 1 // A resposta B é correta (linguagem de programação)
-    },
-    {
-      pergunta: "Qual o símbolo utilizado para comentários de uma única linha em JavaScript?",
-      respostas: [
-        "//",
-        "/* */",
-        "--",
-      ],
-      correta: 0 // A resposta A é correta (//)
-    },
-    {
-      pergunta: "Qual é a função do comando 'console.log()' em JavaScript?",
-      respostas: [
-        "Exibir uma mensagem de alerta na tela",
-        "Imprimir valores no console do navegador",
-        "Executar uma função assíncrona",
-      ],
-      correta: 1 // A resposta B é correta (imprimir valores no console do navegador)
-    },
-    {
-      pergunta: "Como se declara uma variável em JavaScript?",
-      respostas: [
-        "let myVar = 10;",
-        "const myVar = 10;",
-        "var myVar = 10;",
-      ],
-      correta: 2 // A resposta C é correta (var myVar = 10;)
-    },
-    {
-      pergunta: "Qual o operador lógico utilizado para 'ou' em JavaScript?",
-      respostas: [
-        "&&",
-        "||",
-        "!",
-      ],
-      correta: 1 // A resposta B é correta (||)
-    },
-    {
-      pergunta: "O que é uma função em JavaScript?",
-      respostas: [
-        "Um tipo de dado",
-        "Um objeto",
-        "Um bloco de código reutilizável",
-      ],
-      correta: 2 // A resposta C é correta (um bloco de código reutilizável)
-    },
-    {
-      pergunta: "Qual é a função do método 'addEventListener()' em JavaScript?",
-      respostas: [
-        "Criar um novo elemento HTML",
-        "Adicionar um evento a um elemento HTML",
-        "Remover um elemento HTML",
-      ],
-      correta: 1 // A resposta B é correta (adicionar um evento a um elemento HTML)
-    },
-    {
-      pergunta: "Qual é a maneira correta de escrever um loop 'for' em JavaScript?",
-      respostas: [
-        "for (i <= 5; i++) {}",
-        "for (i = 0; i <= 5; i++) {}",
-        "for (i = 0; i < 5; i++) {}",
-      ],
-      correta: 1 // A resposta B é correta (for (i = 0; i <= 5; i++) {})
-    },
-    {
-      pergunta: "Como se verifica o tipo de dado de uma variável em JavaScript?",
-      respostas: [
-        "typeOf",
-        "typeof",
-        "TypeOf",
-      ],
-      correta: 1 // A resposta B é correta (typeof)
-    },
-    {
-      pergunta: "Qual é a forma correta de escrever um comentário de múltiplas linhas em JavaScript?",
-      respostas: [
-        "// Este é um comentário de múltiplas linhas //",
-        "/* Este é um comentário de múltiplas linhas */",
-        "<!-- Este é um comentário de múltiplas linhas -->",
-      ],
-      correta: 1 // A resposta B é correta (/* Este é um comentário de múltiplas linhas */)
-    },
-  ];
+  {
+    pergunta: "Quem é o criador original de Dungeons & Dragons?",
+    respostas: [
+      "Richard Garfield",
+      "Gary Gygax",
+      "Steve Jackson",
+    ],
+    correta: 1 // A resposta B é correta (Gary Gygax)
+  },
+  {
+    pergunta: "Qual é o nome do principal sistema de regras utilizado em Dungeons & Dragons?",
+    respostas: [
+      "D20 System",
+      "Pathfinder",
+      "GURPS",
+    ],
+    correta: 0 // A resposta A é correta (D20 System)
+  },
+  {
+    pergunta: "Quantos jogadores participam de uma típica sessão de Dungeons & Dragons?",
+    respostas: [
+      "Até 4 jogadores",
+      "Até 6 jogadores",
+      "Depende do Mestre",
+    ],
+    correta: 2 // A resposta C é correta (Depende do Mestre)
+  },
+  {
+    pergunta: "Qual é o objetivo principal dos jogadores em Dungeons & Dragons?",
+    respostas: [
+      "Construir impérios e expandir territórios",
+      "Derrotar monstros e coletar tesouros",
+      "Explorar masmorras e completar missões",
+    ],
+    correta: 2 // A resposta C é correta (Explorar masmorras e completar missões)
+  },
+  {
+    pergunta: "Qual é o nome do editor responsável pela quinta edição de Dungeons & Dragons?",
+    respostas: [
+      "Wizards of the Coast",
+      "Paizo Publishing",
+      "Chaosium",
+    ],
+    correta: 0 // A resposta A é correta (Wizards of the Coast)
+  },
+  {
+    pergunta: "Qual é o título do primeiro livro de regras de Dungeons & Dragons lançado em 1974?",
+    respostas: [
+      "Dungeon Master's Guide",
+      "Player's Handbook",
+      "Original Dungeons & Dragons",
+    ],
+    correta: 2 // A resposta C é correta (Original Dungeons & Dragons)
+  },
+  {
+    pergunta: "Qual é o nome do sistema utilizado para criar personagens em Dungeons & Dragons?",
+    respostas: [
+      "Character Builder",
+      "Hero Lab",
+      "Player's Handbook",
+    ],
+    correta: 2 // A resposta C é correta (Player's Handbook)
+  },
+  {
+    pergunta: "Qual é o termo usado para descrever o narrador e árbitro do jogo em Dungeons & Dragons?",
+    respostas: [
+      "Dungeon Master",
+      "Game Master",
+      "Storyteller",
+    ],
+    correta: 0 // A resposta A é correta (Dungeon Master)
+  },
+  {
+    pergunta: "Qual é o nome do mundo fictício mais famoso em Dungeons & Dragons?",
+    respostas: [
+      "Middle-earth",
+      "Forgotten Realms",
+      "Westeros",
+    ],
+    correta: 1 // A resposta B é correta (Forgotten Realms)
+  },
+  {
+    pergunta: "Qual é o nível máximo que um personagem pode atingir em Dungeons & Dragons?",
+    respostas: [
+      "20",
+      "30",
+      "50",
+    ],
+    correta: 0 // A resposta A é correta (20)
+  },
+];
+
   
   //serve para pegar elementos
   const quiz = document.querySelector('#quiz')
