@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Definindo a codificação de caracteres para UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Configurando a visualização para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
     <title>NLW Experts</title>
+    <!-- Importando o arquivo de estilos CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Início do conteúdo principal -->
     <main>
 
+        <!-- Cabeçalho da página -->
         <header>
+          <!-- Imagem do logotipo do NLW -->
           <img src="https://gist.githubusercontent.com/maykbrito/f47569e32fb2b21f2ecc9f4c035c141f/raw/a45997404564112d7596fbb1b9cad5de5521927e/logo.svg" alt="Logo NLW">
+          <!-- Título principal da página -->
           <h1>Teste seus conhecimentos</h1>
         </header>
         
+        <!-- Container onde serão inseridas as perguntas do quiz -->
         <div id="quiz"></div>
         
-          <template>
+        <!-- Modelo de item do quiz que será clonado para cada pergunta -->
+        <template>
             <div class="quiz-item">
+              <!-- Título da pergunta -->
               <h3>
                 Pergunta 01
               </h3>
+              <!-- Lista de opções de resposta -->
               <dl>
+                <!-- Item de resposta (será clonado para cada opção) -->
                 <dt>
-                  <input type="radio"name="item" value="0">
+                  <!-- Caixa de seleção de resposta -->
+                  <input type="radio" name="item" value="0">
+                  <!-- Texto da resposta -->
                   <span>
                     Resposta A 
                   </span>
-              </dt>
+                </dt>
               </dl>
             </div>
         
-          </template>
+        </template>
+        <!-- Container para exibir o número de acertos do usuário -->
         <div id="acertos">
-        <strong>Acertos</strong>
-        <span>0 de 10</span>
+          <!-- Título "Acertos" -->
+          <strong>Acertos</strong>
+          <!-- Contador de acertos -->
+          <span>0 de 10</span>
         </div>
         
-        </main>
-        <script src="./index.js"></script>
+    </main>
+    <!-- Importando o arquivo de script JavaScript -->
+    <script src="./index.js"></script>
 </body>
 </html>

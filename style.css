@@ -1,135 +1,187 @@
+/* Importando a fonte 'Inter' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* Resetando margens, preenchimento e caixa de modelo para todos os elementos */
 *, :root {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Inter', sans-serif;
-font-synthesis: none;
-text-rendering: optimizeLegibility;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
--webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Definindo a fonte padrão como 'Inter' */
+  font-family: 'Inter', sans-serif;
+  /* Desativando a síntese de fonte para evitar ajustes automáticos de estilo */
+  font-synthesis: none;
+  /* Otimizando a renderização de texto para melhor legibilidade */
+  text-rendering: optimizeLegibility;
+  /* Suavizando as bordas das fontes no Safari */
+  -webkit-font-smoothing: antialiased;
+  /* Suavizando as bordas das fontes no Firefox */
+  -moz-osx-font-smoothing: grayscale;
+  /* Garantindo que o tamanho do texto seja 100% em todos os navegadores */
+  -webkit-text-size-adjust: 100%;
 }
 
+/* Estilizando o corpo da página */
 body {
+  /* Definindo a cor de fundo como azul escuro */
   background-color: #0F172A;
 }
 
-
+/* Estilizando o conteúdo principal da página */
 main {
+  /* Adicionando um preenchimento interno de 20 pixels */
   padding: 20px;
+  /* Limitando a largura máxima do conteúdo a 640 pixels */
   max-width: 640px;
+  /* Centralizando o conteúdo na página horizontalmente */
   margin: 0 auto 64px;
 }
 
-header{
-margin-top: 64px;
-padding-bottom: 24px;
-border-bottom: 1px solid #334155;
+/* Estilizando o cabeçalho da página */
+header {
+  /* Adicionando um espaçamento superior de 64 pixels */
+  margin-top: 64px;
+  /* Adicionando um espaçamento inferior de 24 pixels */
+  padding-bottom: 24px;
+  /* Adicionando uma borda inferior de cor escura */
+  border-bottom: 1px solid #334155;
 }
 
+/* Estilizando o título principal do cabeçalho */
 header h1 {
+  /* Adicionando um espaçamento superior de 24 pixels */
   margin-top: 24px;
+  /* Definindo o tamanho da fonte como 30 pixels */
   font-size: 30px;
+  /* Definindo a cor do texto como branco */
   color: #f1f5f9;
 }
 
+/* Resetando o contador do quiz */
 #quiz {
   counter-reset: quiz-item;
 }
 
+/* Estilizando cada item do quiz */
 .quiz-item {
+  /* Adicionando um espaçamento superior de 24 pixels */
   margin-top: 24px;
+  /* Adicionando uma borda com arredondamento de 6 pixels */
   border: 1px solid #475569;
   border-radius: 6px;
-
+  /* Ocultando o overflow para garantir uma aparência consistente */
   overflow: hidden;
 }
 
+/* Estilizando o título de cada pergunta do quiz */
 .quiz-item h3 {
+  /* Adicionando um preenchimento interno de 16 pixels nas laterais e 20 pixels no topo e no fundo */
   padding: 16px 20px;
+  /* Definindo a cor do texto como cinza claro */
   color: #e2e8f0;
-
+  /* Alinhando o texto verticalmente ao centro e espaçando os elementos */
   display: flex;
   align-items: center;
   gap: 12px;
-
+  /* Definindo a cor de fundo como azul escuro */
   background-color: #1e293B;
 }
 
+/* Estilizando o número de cada pergunta do quiz */
 .quiz-item h3:before {
+  /* Incrementando o contador de quiz-item */
   counter-increment: quiz-item;
+  /* Adicionando o número da pergunta dentro de um círculo */
   content: counter(quiz-item);
-
+  /* Estilizando o círculo */
   background-color: #475569;
   width: 28px;
   height: 28px;
+  /* Definindo o tamanho da fonte como 12 pixels */
   font-size: 12px;
+  /* Adicionando um arredondamento de 50% para criar um círculo */
   border-radius: 50%;
-
+  /* Alinhando o conteúdo ao centro */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Evitando que o círculo seja reduzido quando o texto é longo */
   flex-shrink: 0;
 }
 
+/* Estilizando a lista de opções de resposta */
 .quiz-item dl {
+  /* Adicionando um preenchimento interno de 20 pixels nas laterais e 24 pixels no topo e no fundo */
   padding: 20px 24px;
-
-/* gap é dependente do grid! */
+  /* Usando um grid layout para posicionar os itens */
   display: grid;
   gap: 8px;
 }
 
+/* Estilizando cada item da lista de opções de resposta */
 .quiz-item dl dt {
+  /* Definindo o tamanho da fonte como 14 pixels */
   font-size: 14px;
+  /* Definindo a altura da linha como 24 pixels */
   line-height: 24px;
+  /* Definindo o espaçamento entre as letras como normal */
   letter-spacing: 0;
-
+  /* Alinhando o texto verticalmente ao centro e espaçando os elementos */
   display: flex;
   align-items: center;
   gap: 8px;
-
+  /* Definindo a cor do texto como cinza claro */
   color: #e2e8f0;
 }
 
+/* Estilizando as caixas de seleção de resposta */
 input {
+  /* Removendo todos os estilos padrão das caixas de seleção */
   all: unset;
+  /* Adicionando uma borda de 1 pixel sólida e de cor cinza para as caixas de seleção */
   border: 1px solid #94a3b8;
+  /* Definindo a largura e a altura das caixas de seleção como 16 pixels */
   width: 16px;
   height: 16px;
-
+  /* Definindo um arredondamento de 50% para criar um círculo */
   border-radius: 50%;
-/* inline não aceita width e height, por isso usamos inline-block
-o comando foi retirado em favor do display: flex; acima */
+  /* Alinhando o conteúdo ao centro */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Evitando que as caixas de seleção sejam reduzidas quando o texto é longo */
   flex-shrink: 0;
 }
 
+/* Estilizando as caixas de seleção de resposta quando estão marcadas */
 input:checked {
+  /* Alterando a cor da borda quando a caixa de seleção está marcada */
   border: 1px solid #A3E635;
 }
 
+/* Estilizando o marcador das caixas de seleção de resposta quando estão marcadas */
 input:checked:before {
-  /* deixe o content vazio, assim é possível adicionar width e height */
+  /* Adicionando um círculo sólido dentro das caixas de seleção quando estão marcadas */
   content: "";
   width: 10px;
   height: 10px;
+  /* Definindo a cor do círculo como verde */
   background-color: #A3E635;
+  /* Adicionando um arredondamento de 50% para criar um círculo */
   border-radius: 50%;
 }
 
+/* Estilizando o contêiner para exibir o número de acertos do usuário */
 #acertos {
+  /* Centralizando o texto horizontalmente */
   text-align: center;
+  /* Definindo a cor de fundo como verde */
   background-color: #A3E635;
-
+  /* Fixando o contêiner na parte inferior da página */
   position: fixed;
   bottom: 0;
   left: 0;
-
+  /* Definindo a largura como 100% para ocupar toda a largura da tela */
   width: 100%;
+  /* Adicionando um preenchimento interno de 12 pixels nas laterais */
   padding: 12px;
 }
